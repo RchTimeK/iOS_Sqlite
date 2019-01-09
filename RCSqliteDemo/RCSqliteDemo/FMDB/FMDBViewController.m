@@ -18,12 +18,12 @@
     [super viewDidLoad];
     self.navigationItem.title = @"FMDB";
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
-    NSString *filePath = [cachePath stringByAppendingPathComponent:@"Contacts.sqlite"];
+    NSString *filePath = [cachePath stringByAppendingPathComponent:@"Student.sqlite"];
     //获得数据库
     FMDatabase *db = [FMDatabase databaseWithPath:filePath];
     _db = db;
     if(db.open){
-        NSString *sql = @"create table if not exists t_contacts (id integer primary key autoincrement,name text,phone text);";
+        NSString *sql = @"create table if not exists t_student (id integer primary key autoincrement,name text,phone text);";
         //创建表
         if ([db executeUpdate:sql]) {
             NSLog(@"创建表成功！");
@@ -38,7 +38,7 @@
 
 // 增
 - (IBAction)insert:(id)sender {
-    BOOL success = [_db executeUpdate:@"insert into t_contacts (name,phone) values (?,?);",@"小虎牙",@"666666"];
+    BOOL success = [_db executeUpdate:@"insert into t_student (name,phone) values (?,?);",@"小虎牙",@"666666"];
     if(success){
         NSLog(@"插入成功");
     }else{
@@ -48,7 +48,7 @@
 
 // 删
 - (IBAction)delete:(id)sender {
-    BOOL success = [_db executeUpdate:@"delete from t_contacts;"];
+    BOOL success = [_db executeUpdate:@"delete from t_student;"];
     if(success){
         NSLog(@"删除成功");
     }else{
@@ -58,7 +58,7 @@
 
 // 改
 - (IBAction)update:(id)sender{
-    BOOL success = [_db executeUpdate:@"update t_contacts set name = ?;",@"幸福的小虎牙"];
+    BOOL success = [_db executeUpdate:@"update t_student set name = ?;",@"幸福的小虎牙"];
     if(success){
         NSLog(@"插入成功");
     }else{
@@ -68,7 +68,7 @@
 
 // 查
 - (IBAction)select:(id)sender{
-    FMResultSet *result = [_db executeQuery:@"select * from t_contacts;"];
+    FMResultSet *result = [_db executeQuery:@"select * from t_student;"];
     while ([result next]) {
         NSString *name = [result stringForColumn:@"name"];
         NSString *phone = [result stringForColumn:@"phone"];

@@ -38,7 +38,7 @@
 }
 #pragma mark ----- UISearchBarDelegate -----
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    NSString *sql = [NSString stringWithFormat:@"select * from t_contact where name like '%%%@%%' or phone like '%%%@%%';",searchText,searchText];
+    NSString *sql = [NSString stringWithFormat:@"select * from t_contacts where name like '%%%@%%' or phone like '%%%@%%';",searchText,searchText];
     self.contacts = (NSMutableArray *)[ContactTool contactWithSql:sql];
     [self.tableView reloadData];
 }

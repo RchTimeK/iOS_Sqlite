@@ -33,6 +33,7 @@ static NSString * const NewsCellID = @"NewsCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"头条新闻缓存";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"清除缓存" style:(UIBarButtonItemStylePlain) target:self action:@selector(clearCache)];
     self.tableView.rowHeight = 100;
     [self.tableView registerNib:[UINib nibWithNibName:@"NewsCell" bundle:nil] forCellReuseIdentifier:NewsCellID];
     
@@ -47,10 +48,16 @@ static NSString * const NewsCellID = @"NewsCellID";
         return;
     }
     
+    // 请求数据
+    [self dataLoad];
+    
+}
+- (void)dataLoad{
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     session.responseSerializer = [AFHTTPResponseSerializer serializer];
     session.requestSerializer =[AFHTTPRequestSerializer serializer];
     [session GET:@"http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html" parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         NSDictionary * jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         for(NSDictionary *dic in jsonDic[@"T1348647853363"]){
             NewsModel *news = [[NewsModel alloc]initWithDictionary:dic];
@@ -58,13 +65,14 @@ static NSString * const NewsCellID = @"NewsCellID";
         }
         [self.tableView reloadData];
         
+        NSLog(@"------ 当前数据是从头条服务器请求而来 ------");
+        
         // 缓存到数据库
         [NewsCacheTool saveNewsToDatabase:self.newsArray];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull  error) {
         NSLog(@"请求失败！！！");
     }];
-    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.newsArray.count;
@@ -88,5 +96,19 @@ static NSString * const NewsCellID = @"NewsCellID";
     return nil;
 }
 
+- (void)clearCache{
+    [NewsCacheTool clearNewsCache:^(BOOL success) {
+        if(success){
+            [self.newsArray removeAllObjects];
+            [self.tableView reloadData];
+            
+            // 为了效果，做了简单的延时处理
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [self dataLoad];
+            });
+        }
+    }];
+}
 
 @end

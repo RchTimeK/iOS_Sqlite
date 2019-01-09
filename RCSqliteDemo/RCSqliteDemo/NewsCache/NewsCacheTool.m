@@ -40,8 +40,12 @@ static FMDatabase *_db;
         // 这是模型转字典的，自己用runtime简单实现了，有很多优秀的第三方库可以使用，自选
         NSDictionary * newsDic = [nesw getDictionayFromModel];
         NSError *error;
-        //iOS11.0及以上版本使用，支持低版本慎用
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:newsDic requiringSecureCoding:YES error:&error];
+        NSData *data;
+        if (@available(iOS 11.0, *)){
+            data = [NSKeyedArchiver archivedDataWithRootObject:newsDic requiringSecureCoding:YES error:&error];
+        }else{
+            data = [NSKeyedArchiver archivedDataWithRootObject:newsDic];
+        }
         if (data == nil || error) {
             NSLog(@"缓存失败:%@", error);
             return;
@@ -52,7 +56,6 @@ static FMDatabase *_db;
         }else{
             NSLog(@"插入失败");
         }
-        
     }
     
 }
@@ -63,8 +66,12 @@ static FMDatabase *_db;
     while ([set next]) {
         NSData *data = [set dataForColumn:@"dict"];
         NSError *error;
-        //iOS11.0及以上版本使用，支持低版本慎用
-        NSDictionary *dic = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSObject class] fromData:data error:&error];
+        NSDictionary *dic;
+        if (@available(iOS 11.0, *)) {
+            dic = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSObject class] fromData:data error:&error];
+        } else {
+            dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        }
         if(dic){
             NewsModel *news = [[NewsModel alloc]initWithDictionary:dic];
             [array addObject:news];
@@ -72,4 +79,12 @@ static FMDatabase *_db;
     }
     return array;
 }
+
++ (void)clearNewsCache:(void (^)(BOOL success))flag{
+    BOOL success = [_db executeUpdate:@"delete from t_news;"];
+    if(flag){
+        flag(success);
+    }
+}
+
 @end
