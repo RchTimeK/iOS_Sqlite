@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A67419C621E57E0200A3A1F5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67419C521E57E0200A3A1F5 /* libsqlite3.0.tbd */; };
+		A67419CB21E581A000A3A1F5 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A67419C821E581A000A3A1F5 /* ContactModel.m */; };
+		A67419CC21E581A000A3A1F5 /* ContactTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A67419C921E581A000A3A1F5 /* ContactTool.m */; };
+		A67419D421E589D100A3A1F5 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A67419D121E589D100A3A1F5 /* NewsModel.m */; };
+		A67419D521E589D100A3A1F5 /* NewsCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A67419D221E589D100A3A1F5 /* NewsCacheTool.m */; };
+		A67419D921E58AFC00A3A1F5 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A67419D721E58AFC00A3A1F5 /* NewsCell.m */; };
+		A67419DA21E58AFC00A3A1F5 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67419D821E58AFC00A3A1F5 /* NewsCell.xib */; };
 		A67FD4CC21E4983D0055FD6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD4CB21E4983D0055FD6A /* AppDelegate.m */; };
 		A67FD4CF21E4983E0055FD6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD4CE21E4983E0055FD6A /* ViewController.m */; };
 		A67FD4D221E4983E0055FD6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67FD4D021E4983E0055FD6A /* Main.storyboard */; };
@@ -51,6 +58,16 @@
 		A67FD57121E498C40055FD6A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD54721E498C40055FD6A /* UIImageView+WebCache.m */; };
 		A67FD57221E498C40055FD6A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD54A21E498C40055FD6A /* UIView+WebCacheOperation.m */; };
 		A67FD57321E498C40055FD6A /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD54E21E498C40055FD6A /* UIButton+WebCache.m */; };
+		A67FD57D21E49ECD0055FD6A /* SqliteTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD57B21E49ECD0055FD6A /* SqliteTestController.m */; };
+		A67FD57E21E49ECD0055FD6A /* SqliteTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FD57C21E49ECD0055FD6A /* SqliteTestController.xib */; };
+		A67FD58221E49EF80055FD6A /* FuzzyQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD58021E49EF80055FD6A /* FuzzyQueryController.m */; };
+		A67FD58321E49EF80055FD6A /* FuzzyQueryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FD58121E49EF80055FD6A /* FuzzyQueryController.xib */; };
+		A67FD58721E49F070055FD6A /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD58521E49F070055FD6A /* FMDBViewController.m */; };
+		A67FD58821E49F070055FD6A /* FMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FD58621E49F070055FD6A /* FMDBViewController.xib */; };
+		A67FD58C21E49F1D0055FD6A /* FMDBQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD58A21E49F1D0055FD6A /* FMDBQueueController.m */; };
+		A67FD58D21E49F1D0055FD6A /* FMDBQueueController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FD58B21E49F1D0055FD6A /* FMDBQueueController.xib */; };
+		A67FD59121E49F2E0055FD6A /* NewsCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67FD58F21E49F2E0055FD6A /* NewsCacheViewController.m */; };
+		A67FD59221E49F2E0055FD6A /* NewsCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FD59021E49F2E0055FD6A /* NewsCacheViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +88,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A67419C521E57E0200A3A1F5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A67419C721E581A000A3A1F5 /* ContactTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTool.h; sourceTree = "<group>"; };
+		A67419C821E581A000A3A1F5 /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
+		A67419C921E581A000A3A1F5 /* ContactTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTool.m; sourceTree = "<group>"; };
+		A67419CA21E581A000A3A1F5 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
+		A67419CD21E589D000A3A1F5 /* NewsCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCacheTool.h; sourceTree = "<group>"; };
+		A67419CF21E589D100A3A1F5 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		A67419D121E589D100A3A1F5 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		A67419D221E589D100A3A1F5 /* NewsCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCacheTool.m; sourceTree = "<group>"; };
+		A67419D621E58AFC00A3A1F5 /* NewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		A67419D721E58AFC00A3A1F5 /* NewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		A67419D821E58AFC00A3A1F5 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		A67FD4C721E4983D0055FD6A /* RCSqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67FD4CA21E4983D0055FD6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A67FD4CB21E4983D0055FD6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +194,21 @@
 		A67FD54D21E498C40055FD6A /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		A67FD54E21E498C40055FD6A /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		A67FD54F21E498C40055FD6A /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		A67FD57A21E49ECD0055FD6A /* SqliteTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteTestController.h; sourceTree = "<group>"; };
+		A67FD57B21E49ECD0055FD6A /* SqliteTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteTestController.m; sourceTree = "<group>"; };
+		A67FD57C21E49ECD0055FD6A /* SqliteTestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SqliteTestController.xib; sourceTree = "<group>"; };
+		A67FD57F21E49EF80055FD6A /* FuzzyQueryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FuzzyQueryController.h; sourceTree = "<group>"; };
+		A67FD58021E49EF80055FD6A /* FuzzyQueryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyQueryController.m; sourceTree = "<group>"; };
+		A67FD58121E49EF80055FD6A /* FuzzyQueryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FuzzyQueryController.xib; sourceTree = "<group>"; };
+		A67FD58421E49F070055FD6A /* FMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		A67FD58521E49F070055FD6A /* FMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		A67FD58621E49F070055FD6A /* FMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMDBViewController.xib; sourceTree = "<group>"; };
+		A67FD58921E49F1D0055FD6A /* FMDBQueueController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBQueueController.h; sourceTree = "<group>"; };
+		A67FD58A21E49F1D0055FD6A /* FMDBQueueController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBQueueController.m; sourceTree = "<group>"; };
+		A67FD58B21E49F1D0055FD6A /* FMDBQueueController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMDBQueueController.xib; sourceTree = "<group>"; };
+		A67FD58E21E49F2E0055FD6A /* NewsCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsCacheViewController.h; sourceTree = "<group>"; };
+		A67FD58F21E49F2E0055FD6A /* NewsCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsCacheViewController.m; sourceTree = "<group>"; };
+		A67FD59021E49F2E0055FD6A /* NewsCacheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCacheViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67419C621E57E0200A3A1F5 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +237,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A67419C421E57E0100A3A1F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A67419C521E57E0200A3A1F5 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A67FD4BE21E4983D0055FD6A = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +252,7 @@
 				A67FD4E221E4983F0055FD6A /* RCSqliteDemoTests */,
 				A67FD4ED21E4983F0055FD6A /* RCSqliteDemoUITests */,
 				A67FD4C821E4983D0055FD6A /* Products */,
+				A67419C421E57E0100A3A1F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +269,11 @@
 		A67FD4C921E4983D0055FD6A /* RCSqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A67FD57421E49D210055FD6A /* SqliteTest */,
+				A67FD57621E49D900055FD6A /* FuzzyQuery */,
+				A67FD57721E49E140055FD6A /* FMDB */,
+				A67FD57821E49E580055FD6A /* FMDB_Queue */,
+				A67FD57921E49E840055FD6A /* NewsCache */,
 				A67FD4FC21E498850055FD6A /* ThirdLibs */,
 				A67FD4CA21E4983D0055FD6A /* AppDelegate.h */,
 				A67FD4CB21E4983D0055FD6A /* AppDelegate.m */,
@@ -372,6 +431,67 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		A67FD57421E49D210055FD6A /* SqliteTest */ = {
+			isa = PBXGroup;
+			children = (
+				A67FD57A21E49ECD0055FD6A /* SqliteTestController.h */,
+				A67FD57B21E49ECD0055FD6A /* SqliteTestController.m */,
+				A67FD57C21E49ECD0055FD6A /* SqliteTestController.xib */,
+			);
+			path = SqliteTest;
+			sourceTree = "<group>";
+		};
+		A67FD57621E49D900055FD6A /* FuzzyQuery */ = {
+			isa = PBXGroup;
+			children = (
+				A67FD57F21E49EF80055FD6A /* FuzzyQueryController.h */,
+				A67FD58021E49EF80055FD6A /* FuzzyQueryController.m */,
+				A67FD58121E49EF80055FD6A /* FuzzyQueryController.xib */,
+				A67419CA21E581A000A3A1F5 /* ContactModel.h */,
+				A67419C821E581A000A3A1F5 /* ContactModel.m */,
+				A67419C721E581A000A3A1F5 /* ContactTool.h */,
+				A67419C921E581A000A3A1F5 /* ContactTool.m */,
+			);
+			path = FuzzyQuery;
+			sourceTree = "<group>";
+		};
+		A67FD57721E49E140055FD6A /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A67FD58421E49F070055FD6A /* FMDBViewController.h */,
+				A67FD58521E49F070055FD6A /* FMDBViewController.m */,
+				A67FD58621E49F070055FD6A /* FMDBViewController.xib */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		A67FD57821E49E580055FD6A /* FMDB_Queue */ = {
+			isa = PBXGroup;
+			children = (
+				A67FD58921E49F1D0055FD6A /* FMDBQueueController.h */,
+				A67FD58A21E49F1D0055FD6A /* FMDBQueueController.m */,
+				A67FD58B21E49F1D0055FD6A /* FMDBQueueController.xib */,
+			);
+			path = FMDB_Queue;
+			sourceTree = "<group>";
+		};
+		A67FD57921E49E840055FD6A /* NewsCache */ = {
+			isa = PBXGroup;
+			children = (
+				A67FD58E21E49F2E0055FD6A /* NewsCacheViewController.h */,
+				A67FD58F21E49F2E0055FD6A /* NewsCacheViewController.m */,
+				A67FD59021E49F2E0055FD6A /* NewsCacheViewController.xib */,
+				A67419CD21E589D000A3A1F5 /* NewsCacheTool.h */,
+				A67419D221E589D100A3A1F5 /* NewsCacheTool.m */,
+				A67419CF21E589D100A3A1F5 /* NewsModel.h */,
+				A67419D121E589D100A3A1F5 /* NewsModel.m */,
+				A67419D621E58AFC00A3A1F5 /* NewsCell.h */,
+				A67419D721E58AFC00A3A1F5 /* NewsCell.m */,
+				A67419D821E58AFC00A3A1F5 /* NewsCell.xib */,
+			);
+			path = NewsCache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +598,12 @@
 				A67FD4D721E4983F0055FD6A /* LaunchScreen.storyboard in Resources */,
 				A67FD4D421E4983F0055FD6A /* Assets.xcassets in Resources */,
 				A67FD4D221E4983E0055FD6A /* Main.storyboard in Resources */,
+				A67FD58821E49F070055FD6A /* FMDBViewController.xib in Resources */,
+				A67FD59221E49F2E0055FD6A /* NewsCacheViewController.xib in Resources */,
+				A67FD57E21E49ECD0055FD6A /* SqliteTestController.xib in Resources */,
+				A67419DA21E58AFC00A3A1F5 /* NewsCell.xib in Resources */,
+				A67FD58321E49EF80055FD6A /* FuzzyQueryController.xib in Resources */,
+				A67FD58D21E49F1D0055FD6A /* FMDBQueueController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,24 +628,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67419D521E589D100A3A1F5 /* NewsCacheTool.m in Sources */,
 				A67FD55B21E498C40055FD6A /* AFURLSessionManager.m in Sources */,
 				A67FD55021E498C40055FD6A /* UIProgressView+AFNetworking.m in Sources */,
+				A67419CC21E581A000A3A1F5 /* ContactTool.m in Sources */,
 				A67FD4CF21E4983E0055FD6A /* ViewController.m in Sources */,
+				A67419D421E589D100A3A1F5 /* NewsModel.m in Sources */,
 				A67FD56121E498C40055FD6A /* FMDatabase.m in Sources */,
 				A67FD55621E498C40055FD6A /* UIWebView+AFNetworking.m in Sources */,
 				A67FD56621E498C40055FD6A /* SDWebImageManager.m in Sources */,
 				A67FD56221E498C40055FD6A /* FMDatabasePool.m in Sources */,
+				A67FD58221E49EF80055FD6A /* FuzzyQueryController.m in Sources */,
 				A67FD56721E498C40055FD6A /* SDWebImageDecoder.m in Sources */,
 				A67FD55221E498C40055FD6A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A67FD56C21E498C40055FD6A /* SDWebImageCompat.m in Sources */,
 				A67FD55121E498C40055FD6A /* UIRefreshControl+AFNetworking.m in Sources */,
+				A67FD59121E49F2E0055FD6A /* NewsCacheViewController.m in Sources */,
 				A67FD56F21E498C40055FD6A /* SDWebImageDownloaderOperation.m in Sources */,
+				A67419D921E58AFC00A3A1F5 /* NewsCell.m in Sources */,
 				A67FD57121E498C40055FD6A /* UIImageView+WebCache.m in Sources */,
 				A67FD55A21E498C40055FD6A /* AFHTTPSessionManager.m in Sources */,
 				A67FD55C21E498C40055FD6A /* AFURLRequestSerialization.m in Sources */,
 				A67FD55921E498C40055FD6A /* AFURLResponseSerialization.m in Sources */,
 				A67FD55F21E498C40055FD6A /* FMDatabaseQueue.m in Sources */,
 				A67FD4DA21E4983F0055FD6A /* main.m in Sources */,
+				A67FD58C21E49F1D0055FD6A /* FMDBQueueController.m in Sources */,
 				A67FD55E21E498C40055FD6A /* AFSecurityPolicy.m in Sources */,
 				A67FD55321E498C40055FD6A /* UIImageView+AFNetworking.m in Sources */,
 				A67FD55D21E498C40055FD6A /* AFNetworkReachabilityManager.m in Sources */,
@@ -534,13 +667,16 @@
 				A67FD56421E498C40055FD6A /* UIImage+WebP.m in Sources */,
 				A67FD56B21E498C40055FD6A /* UIImage+MultiFormat.m in Sources */,
 				A67FD4CC21E4983D0055FD6A /* AppDelegate.m in Sources */,
+				A67FD58721E49F070055FD6A /* FMDBViewController.m in Sources */,
 				A67FD55721E498C40055FD6A /* AFAutoPurgingImageCache.m in Sources */,
 				A67FD55821E498C40055FD6A /* AFImageDownloader.m in Sources */,
 				A67FD56E21E498C40055FD6A /* SDImageCache.m in Sources */,
+				A67419CB21E581A000A3A1F5 /* ContactModel.m in Sources */,
 				A67FD56521E498C40055FD6A /* MKAnnotationView+WebCache.m in Sources */,
 				A67FD56D21E498C40055FD6A /* SDWebImagePrefetcher.m in Sources */,
 				A67FD56821E498C40055FD6A /* UIImageView+HighlightedWebCache.m in Sources */,
 				A67FD56021E498C40055FD6A /* FMDatabaseAdditions.m in Sources */,
+				A67FD57D21E49ECD0055FD6A /* SqliteTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +849,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RCSqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,6 +866,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RCSqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
