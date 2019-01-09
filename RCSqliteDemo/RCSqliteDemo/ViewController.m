@@ -31,7 +31,7 @@
     if(!cell){
         cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:cellID];
     }
-    cell.textLabel.text = @[@"Sqlite原生学习",@"模糊查询",@"FMDB简单使用",@"FMDB多线程与事务",@"数据缓存（以头条为例）"][indexPath.row];
+    cell.textLabel.text = @[@"Sqlite简单使用",@"模糊查询",@"FMDB简单使用",@"FMDB多线程与事务",@"数据缓存（以头条为例）"][indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
